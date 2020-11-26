@@ -4,14 +4,11 @@
 ## Copyright © 2020 AzraelHive
 ##
 
-## Check Root Access
-if [[ $(/usr/bin/id -u) -ne 0 ]]; then
-    echo "Not running as root"
-    exit
-fi
-
 ## User Home Directory
-cd ~
+sudo cd ~
+
+## Install Git, Curl and Unzip
+sudo apt install unzip curl git -y
 
 ## Add Universal Repository
 sudo add-apt-repository universe
@@ -25,7 +22,7 @@ sudo apt install nginx -y
 
 ## Install & Setup MySQL Database
 sudo apt install mysql-server mysql-client -y 
-mysql -u root -p <<myQuery
+sudo mysql -u root -p <<myQuery
   CREATE USER 'user'@'%' identified by 'password';
   GRANT ALL PRIVILEGES ON *.* TO 'user'@'%';
   DROP USER ''@'localhost'
@@ -36,12 +33,12 @@ myQuery
 
 ## Install & Setup PHP
 sudo apt install php7.2 -y
-sudo apt install php7.2-curl php7.2-dev php7.2-gd php7.2-intl php7.2-mbstring php7.2-xml php7.2-zip php7.2-mysql php7.2-cli php7.2-fpm libapache2-mod-php -y
+sudo apt install php7.2-bcmath php7.2-curl php7.2-dev php7.2-gd php7.2-intl php7.2-mbstring php7.2-xml php7.2-zip php7.2-mysql php-cli libapache2-mod-php php7.2-dev php7.2-fpm -y
 
 ## Create PHP Information File
-echo "<?php phpinfo();?>" >> /var/www/html/info.php
+sudo echo "<?php phpinfo();?>" >> /var/www/html/info.php
 
 ## Install & Setup Composer
 sudo curl -sS https://getcomposer.org/installer -o composer-setup.php
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-rm composer-setup.php
+sudo rm composer-setup.php

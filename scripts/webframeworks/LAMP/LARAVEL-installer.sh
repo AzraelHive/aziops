@@ -7,6 +7,9 @@
 ## User Home Directory
 sudo cd ~
 
+## Install Git, Curl and Unzip
+sudo apt install unzip curl git -y
+
 ## Update and Upgrade Distro
 sudo apt update
 sudo apt upgrade -y
@@ -39,9 +42,7 @@ sudo pecl install mcrypt-1.0.1
 
 ## Add mcrypt Module to php.ini
 sudo wget -O /etc/php/7.2/apache2/php.ini https://raw.githubusercontent.com/AzraelHive/aziops/main/scripts/stacks/webframeworks/LAMP/laravel/php/7.2/apache2/php.ini
-
-## Create PHP Information File
-sudo echo "<?php phpinfo();?>" >> /var/www/html/info.php
+sudo service apache2 restart
 
 ## Install & Setup Composer
 sudo curl -sS https://getcomposer.org/installer -o composer-setup.php
@@ -58,4 +59,3 @@ sudo chmod -R 775 /var/www/html/laravel
 sudo chmod -R 777 /var/www/html/laravel/storage
 sudo mv .env.example .env
 sudo php artisan key:generate
-sudo service apache2 restart
