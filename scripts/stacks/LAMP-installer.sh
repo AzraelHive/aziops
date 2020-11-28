@@ -23,7 +23,7 @@ sudo a2enmod rewrite
 
 ## Install & Setup MySQL Database
 sudo apt install mysql-server mysql-client -y 
-sudo mysql -u root -p <<myQuery
+sudo mysql -u root -p changemepls <<myQuery
   CREATE USER 'user'@'%' identified by 'password';
   GRANT ALL PRIVILEGES ON *.* TO 'user'@'%';
   DROP USER ''@'localhost'
