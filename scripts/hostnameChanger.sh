@@ -1,7 +1,7 @@
 #!/bin/bash
 ##
 ## hostnameChanger.sh (Bionic64)
-## By James Roi Dela Cruz
+## Copyright © 2020 AzraelHive
 ## Build 12012020_0710
 ##
 
