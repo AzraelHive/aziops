@@ -4,6 +4,9 @@
 ## Copyright © 2020 AzraelHive
 ##
 
+## Modify Repository
+sudo add-apt-repository ppa:ondrej/php
+
 ## User Home Directory
 sudo cd ~
 
