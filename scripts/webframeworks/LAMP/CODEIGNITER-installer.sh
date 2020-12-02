@@ -48,7 +48,6 @@ sudo rm composer-setup.php
 ## Downlaod & Configure Codeigniter
 sudo wget -O ci3.zip https://api.github.com/repos/bcit-ci/CodeIgniter/zipball/3.1.11
 sudo unzip ci3.zip
-sudo mv bcit-ci-CodeIgniter-* codeigniter
-sudo mv codeigniter /var/www/html
+sudo mv bcit-ci-CodeIgniter-* /var/www/html/codeigniter
 sudo chmod -R 775 /var/www/html/codeigniter
 sudo chown -R www-data:www-data /var/www/html/codeigniter
