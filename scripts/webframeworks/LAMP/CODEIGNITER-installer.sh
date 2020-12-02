@@ -21,7 +21,7 @@ sudo apt install unzip curl git -y
 sudo apt install apache2 -y
 sudo cd /etc/apache2/sites-available
 sudo rm 000-default.conf
-sudo wget https://raw.githubusercontent.com/AzraelHive/aziops/main/scripts/webframeworks/lamp/codeigniter/etc/apache2/sites-available/000-default.conf -O /etc/apache2/sites-available/000-default.conf
+sudo wget https://raw.githubusercontent.com/AzraelHive/aziops/main/scripts/webframeworks/LAMP/codeigniter/etc/apache2/sites-available/000-default.conf -O /etc/apache2/sites-available/000-default.conf
 sudo a2enmod rewrite
 sudo service apache2 restart
 
