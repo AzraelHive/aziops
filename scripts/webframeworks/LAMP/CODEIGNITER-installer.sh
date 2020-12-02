@@ -50,5 +50,5 @@ sudo wget -O ci3.zip https://api.github.com/repos/bcit-ci/CodeIgniter/zipball/3.
 sudo unzip ci3.zip
 sudo mv bcit-ci-CodeIgniter-* codeigniter
 sudo mv codeigniter /var/www/html
-sudo chmod -R 775 codeigniter
-sudo chown -R www-data:www-data codeigniter
+sudo chmod -R 775 /var/www/html/codeigniter
+sudo chown -R www-data:www-data /var/www/html/codeigniter
